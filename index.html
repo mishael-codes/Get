@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Word Length</title>
+</head>
+<body>
+    <section>
+        <p id="wd"></p>
+        <button id="btn">Get Word Length</button>
+        <sub>Note: <strong>DO NOT</strong> add spaces to your word.</sub>
+    </section>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener('click', function(){
+            var wrd = prompt("Enter word below");
+            if(wrd.length == 8 || wrd.length == 11 || wrd.length == 18){
+                document.getElementById('wd').innerHTML = "The word " + '"' + wrd +'"' + " is an " + wrd.length + " letter word.";
+            }else if(wrd.length == 0){
+                document.getElementById('wd').innerHTML = "Please input a word!"
+            }else{
+                document.getElementById('wd').innerHTML = "The word " + '"' + wrd +'"' + " is a " + wrd.length + " letter word.";
+            }
+        })
+    </script>
+</body>
+</html>

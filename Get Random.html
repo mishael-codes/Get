@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Random</title>
+</head>
+<body>
+    <section>
+        <p id="demo"></p>
+        <button onclick="getrandom(1, 200)" id="btn">Get Random Number</button>
+        <sub>NOTE: Numbers are chosen from <strong>ONLY 1 - 200</strong></sub>
+    </section>
+    <script>
+        function getrandom(min, max){
+            var rand = Math.floor(Math.random() * (min - max + 1) + min);
+            if(rand <= 9){
+                document.getElementById('demo').innerHTML = "Random Number => Hundreds => Tens => Units: <br>" + rand; 
+            }
+            else if(rand >= 10 && rand <= 99){
+                document.getElementById('demo').innerHTML = "Random Number => Hundreds => Tens: <br>" + rand;
+            }
+            else{
+                document.getElementById('demo').innerHTML = "Random Number => Hundreds: <br>" + rand;
+            } 
+        }
+    </script>
+</body>
+</html>

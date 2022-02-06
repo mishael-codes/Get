@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25vh 1rem 1rem 1rem;
+    padding: 1.5rem;
+    color: darkblue;
+    border: .7rem groove darkblue;
+    border-radius: 1.2rem;
+    
+}
+#wd, sub{
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+#btn{
+    border: .5rem groove darkblue;
+    border-radius: 1.2rem;
+    background:transparent ;
+    color: darkblue;
+    font-weight: 700;
+    margin: 1rem 0;
+    padding: .4rem;
+    cursor: pointer;
+    outline: none;
+}
+#btn:active{
+    border: .5rem groove black;
+    color:black;
+}
+@media screen and (min-width:900px) {
+    section{
+        width: 30vw;
+        /*margin: auto;*/
+        margin-left: 35vw;
+    }
+}
