@@ -15,7 +15,7 @@
     </section>
     <script>
         function getrandom(min, max){
-            var rand = Math.floor(Math.random() * (min - max + 1) + min);
+            var rand = Math.floor(Math.random() * (min + max - 1) + min);
             if(rand <= 9){
                 document.getElementById('demo').innerHTML = "Random Number => Hundreds => Tens => Units: <br>" + rand; 
             }
